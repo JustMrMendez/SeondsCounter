@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  position: relative;
+  color: #333;
+}
+
+.seconds-counter {
+  font-family: 'Digital-7', 'Courier New', monospace;
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  padding: 20px;
+  margin-bottom: 20px;
+  display: inline-block;
+  transform: scale(1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.seconds-counter:hover {
+  transform: scale(1.05);
+}
+
+p {
+  font-size: 2.5em;
+  color: #333;
+  margin: 0;
+}
+
+.timer-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.timer-controls button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-family: 'Digital-7', 'Courier New', monospace;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.timer-controls button:hover {
+  background-color: #444;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.timer-controls button:active {
+  background-color: #555;
+  transform: translateY(2px);
+}
+
+.timer-controls button:focus {
+  outline: none;
+}
+
