@@ -5,31 +5,33 @@ import { TimerControls } from './TimerControls';
 
 function App() {
   const [seconds, setSeconds] = useState(0);
-  const [isActive, setIsActive] = useState(true);
-  const formattedTime = new Date(seconds * 1000).toISOString().slice(11, 19);
+  
+
   useEffect(() => {
-    let interval = null;
+    console.log('useEffect', seconds)
 
-    if (isActive) {
-      interval = setInterval(() => {
-        setSeconds((seconds) => seconds + 1);
-      }, 1000);
-    } else if (!isActive && seconds !== 0) {
-      clearInterval(interval);
-    }
+    return () => console.log()
+  }u);
 
-    return () => clearInterval(interval);
-  }, [isActive, seconds]);
+  
 
-  const resetTimer = () => {
-    setIsActive(true);
-    setSeconds(0);
   };
-
+ 
   return (
     <div className="App">
-      <SecondsCounter formattedTime={formattedTime} />
-      <TimerControls
+    
+
+
+
+
+    <SecondsCounter firstName="Gonzalo" sisterName="Navia" />
+      
+
+
+
+
+
+    <TimerControls
         onResume={
           () => setIsActive(true)
         }
